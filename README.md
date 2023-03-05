@@ -6,7 +6,8 @@ README - MAKE TOOLS
 2. [Clone The Repository](#clone-the-repository)
 3. [Build the project](#build-the-project)
 4. [Usage](#usage)
-5. [Contact](#contact)
+5. [Alias Configuration](#alias-configuration)
+6. [Contact](#contact)
 
 ## About The Project
 * **Few tools to simplify compilation of takuzu project.**
@@ -64,6 +65,17 @@ mkc
 * **Run Memory Leak Tests**
 ```
 mkm
+```
+
+## Alias Configuration
+
+* **Add the following lines to your .bashrc / .zshrc file**
+
+```
+alias mkb="source /usr/bin/mkb"
+alias mkt="source /usr/bin/mkt"
+alias mkc="source /usr/bin/mkc"
+alias mkm="source /usr/bin/mkm"
 ```
 
 ## Contact
