@@ -1,0 +1,4 @@
+#!/bin/bash
+
+mkb RELEASE
+make test

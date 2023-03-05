@@ -1,0 +1,10 @@
+#!/bin/bash
+
+mkb DEBUG
+make test
+make ExperimentalCoverage
+prev=$(grep -o '[0-9]\+' ../custom_build/coverage/history.txt | tail -1)
+make ExperimentalCoverage | grep Covered >> ../custom_build/coverage/history.txt
+echo "\\n>> Previous coverage was: $prev"
+rm -rf ../custom_build/coverage/CoverageInfo/
+cp -r Testing/CoverageInfo ../custom_build/coverage/CoverageInfo

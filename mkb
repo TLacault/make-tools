@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if [[ $(pwd | rev | cut -d '/' -f 1 | rev) == "build" ]]; then
+    cd ..
+fi
+rm -rf build/
+mkdir build
+rm -f *.c
+cp -f lib/* ./
+cp -f src/* ./
+cd build
+clear
+mode=$1
+if [[ $1 != "DEBUG" ]] && [[ $1 != "RELEASE" ]]; then
+    mode="RELEASE"
+fi
+cmake -DCMAKE_BUILD_TYPE=$mode ..
+make

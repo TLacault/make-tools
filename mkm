@@ -1,0 +1,7 @@
+#!/bin/bash
+
+mkb DEBUG
+make ExperimentalMemCheck
+rm -rf ../custom_build/memcheck/
+mkdir ../custom_build/memcheck/
+find Testing/Temporary/ -type f -name "MemoryChecker.*.log" -size +0 -exec cp {} ../custom_build/memcheck/ \;
