@@ -10,7 +10,7 @@ README - MAKE TOOLS
 6. [Contact](#contact)
 
 ## About The Project
-* **Few tools to simplify compilation of takuzu project.**
+* **Few tools to simplify compilation of c project using CMakeLists.**
 * **Made by [Tim Lacault](https://github.com/TLacault)**
 
 ## Clone The Repository
